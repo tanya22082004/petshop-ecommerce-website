@@ -22,6 +22,10 @@ app.get("/contact",(req,res)=>{
 })
 
 
+app.get("/blogs",(req,res)=>{
+    res.sendFile(__dirname+"/blogs.html");
+})
+
 app.post("/contact",(req,res)=>{
     var fname=req.body.FirstName;
     var lname=req.body.LastName;
