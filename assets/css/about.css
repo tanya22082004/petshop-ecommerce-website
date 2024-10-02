@@ -613,3 +613,51 @@
       font-size: 15px;
     }
   }
+  
+  body {
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  #background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .responsive-container-block.bigContainer {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(176, 98, 255, 0.5);
+  }
+  
+  .mainImg {
+    box-shadow: 0 0 15px rgba(176, 98, 255, 0.8);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .mainImg:hover {
+    transform: scale(1.05);
+  }
+  
+  .purpleBox {
+    background-color: rgba(176, 98, 255, 0.8);
+    box-shadow: 0 0 15px rgba(176, 98, 255, 0.8);
+  }
+  
+  .explore {
+    background-color: rgba(176, 98, 255, 0.8);
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .explore:hover {
+    background-color: #fff;
+    color: rgb(176, 98, 255);
+    transform: scale(1.05);
+  }

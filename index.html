@@ -67,7 +67,7 @@
           </li>
 
           <li class="navbar-item">
-            <a href="category" class="navbar-link" data-nav-link>Collections</a>
+            <a href="/collections" class="navbar-link" data-nav-link>Collections</a>
           </li>
 
           <li class="navbar-item">
@@ -78,9 +78,11 @@
             <a href="/contact" class="navbar-link" data-nav-link>Contact</a>
           </li>
 
-        </ul>
-
-        <a href="#" class="navbar-action-btn">Log In</a>
+        
+        <li class="navbar-item">
+        <a href="/login" class="navbar-link" data-nav-link>Log In</a>
+      </li>
+    </ul>
       </nav>
 
       <div class="header-actions">
@@ -99,12 +101,16 @@
           <span class="btn-badge">0</span>
         </button>
 
+        <!-- Add this button next to the cart button -->
+        <button class="action-btn" aria-label="wishlist" onclick="location.href='/wishlist'">
+          <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+          <span class="btn-badge wishlist-count">0</span>
+        </button>
+
       </div>
 
     </div>
   </header>
-
-
 
 
 
@@ -316,8 +322,8 @@
                   <img src="images/product-1_0.jpg" width="360" height="360" loading="lazy" alt="Commodo leo sed porta"
                     class="img-cover hover">
 
-                  <button class="card-action-btn" aria-label="add to card" title="Add To Card">
-                    <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                  <button class="card-action-btn" aria-label="add to wishlist" title="Add to Wishlist" onclick="addToWishlist(this)" data-product-id="1" data-product-name="Product Name" data-product-price="$19.99" data-product-image="path/to/image.jpg">
+                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
                   </button>
                 </div>
 
@@ -355,8 +361,8 @@
                   <img src="images/product-2_0.jpg" width="360" height="360" loading="lazy"
                     alt="Purus consequat congue sit" class="img-cover hover">
 
-                  <button class="card-action-btn" aria-label="add to card" title="Add To Card">
-                    <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                  <button class="card-action-btn" aria-label="add to wishlist" title="Add to Wishlist" onclick="addToWishlist(this)" data-product-id="1" data-product-name="Product Name" data-product-price="$19.99" data-product-image="path/to/image.jpg">
+                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
                   </button>
                 </div>
 
@@ -394,8 +400,8 @@
                   <img src="images/product-3_0.jpg" width="360" height="360" loading="lazy"
                     alt="Morbi vel arcu scelerisque" class="img-cover hover">
 
-                  <button class="card-action-btn" aria-label="add to card" title="Add To Card">
-                    <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                  <button class="card-action-btn" aria-label="add to wishlist" title="Add to Wishlist" onclick="addToWishlist(this)" data-product-id="1" data-product-name="Product Name" data-product-price="$19.99" data-product-image="path/to/image.jpg">
+                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
                   </button>
                 </div>
 
@@ -433,8 +439,8 @@
                   <img src="images/product-4_0.jpg" width="360" height="360" loading="lazy"
                     alt="Morbi vel arcu scelerisque" class="img-cover hover">
 
-                  <button class="card-action-btn" aria-label="add to card" title="Add To Card">
-                    <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                  <button class="card-action-btn" aria-label="add to wishlist" title="Add to Wishlist" onclick="addToWishlist(this)" data-product-id="1" data-product-name="Product Name" data-product-price="$19.99" data-product-image="path/to/image.jpg">
+                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
                   </button>
                 </div>
 
@@ -472,8 +478,8 @@
                   <img src="images/product-5_0.jpg" width="360" height="360" loading="lazy"
                     alt="Morbi vel arcu scelerisque" class="img-cover hover">
 
-                  <button class="card-action-btn" aria-label="add to card" title="Add To Card">
-                    <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                  <button class="card-action-btn" aria-label="add to wishlist" title="Add to Wishlist" onclick="addToWishlist(this)" data-product-id="1" data-product-name="Product Name" data-product-price="$19.99" data-product-image="path/to/image.jpg">
+                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
                   </button>
                 </div>
 
@@ -511,8 +517,8 @@
                   <img src="images/product-6_0.jpg" width="360" height="360" loading="lazy"
                     alt="Nam justo libero porta ege" class="img-cover hover">
 
-                  <button class="card-action-btn" aria-label="add to card" title="Add To Card">
-                    <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                  <button class="card-action-btn" aria-label="add to wishlist" title="Add to Wishlist" onclick="addToWishlist(this)" data-product-id="1" data-product-name="Product Name" data-product-price="$19.99" data-product-image="path/to/image.jpg">
+                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
                   </button>
                 </div>
 
@@ -550,8 +556,8 @@
                   <img src="images/product-7_0.jpg" width="360" height="360" loading="lazy"
                     alt="Nam justo libero porta ege" class="img-cover hover">
 
-                  <button class="card-action-btn" aria-label="add to card" title="Add To Card">
-                    <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                  <button class="card-action-btn" aria-label="add to wishlist" title="Add to Wishlist" onclick="addToWishlist(this)" data-product-id="1" data-product-name="Product Name" data-product-price="$19.99" data-product-image="path/to/image.jpg">
+                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
                   </button>
                 </div>
 
@@ -589,8 +595,8 @@
                   <img src="images/product-8_0.jpg" width="360" height="360" loading="lazy" alt="Etiam commodo leo sed"
                     class="img-cover hover">
 
-                  <button class="card-action-btn" aria-label="add to card" title="Add To Card">
-                    <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                  <button class="card-action-btn" aria-label="add to wishlist" title="Add to Wishlist" onclick="addToWishlist(this)" data-product-id="1" data-product-name="Product Name" data-product-price="$19.99" data-product-image="path/to/image.jpg">
+                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
                   </button>
                 </div>
 
@@ -731,12 +737,12 @@
 
             <img src="images/cta-icon.png" width="120" height="35" loading="lazy" alt="taste guarantee" class="img">
 
-            <h2 class="h2 section-title">Taste it, love it or we’ll replace it… Guaranteed!</h2>
+            <h2 class="h2 section-title">Taste it, love it or we'll replace it… Guaranteed!</h2>
 
             <p class="section-text">
-              At Petio, we believe your dog and cat will love their food so much that if they don’t … we’ll help you
+              At Petio, we believe your dog and cat will love their food so much that if they don't … we'll help you
               find a
-              replacement. That’s our taste guarantee.
+              replacement. That's our taste guarantee.
             </p>
 
             <a href="#" class="btn">Find out more</a>

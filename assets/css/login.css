@@ -1,0 +1,170 @@
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Nunito Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.login-container {
+    max-width: 400px;
+    width: 90%;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.login-container h2 {
+    text-align: center;
+    color: var(--orange-soda);
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: colorChange 5s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% { color: var(--orange-soda); }
+    50% { color: var(--bittersweet); }
+    100% { color: var(--orange-soda); }
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--eerie-black);
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--orange-soda);
+    box-shadow: 0 0 8px rgba(255, 87, 51, 0.3);
+}
+
+.form-group input:focus + label {
+    color: var(--orange-soda);
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--orange-soda);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    background-color: var(--bittersweet);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 1;
+    }
+    20% {
+        transform: scale(25, 25);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(40, 40);
+    }
+}
+
+.btn:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+}
+
+.login-container p {
+    text-align: center;
+    margin-top: 25px;
+    color: var(--eerie-black);
+}
+
+.login-container a {
+    color: var(--orange-soda);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.login-container a:hover {
+    color: var(--bittersweet);
+    text-decoration: underline;
+}
+
+/* Add a subtle background pattern */
+.background-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(30deg, #f5f7fa 12%, transparent 12.5%, transparent 87%, #f5f7fa 87.5%, #f5f7fa),
+        linear-gradient(150deg, #f5f7fa 12%, transparent 12.5%, transparent 87%, #f5f7fa 87.5%, #f5f7fa),
+        linear-gradient(30deg, #f5f7fa 12%, transparent 12.5%, transparent 87%, #f5f7fa 87.5%, #f5f7fa),
+        linear-gradient(150deg, #f5f7fa 12%, transparent 12.5%, transparent 87%, #f5f7fa 87.5%, #f5f7fa),
+        linear-gradient(60deg, #c3cfe277 25%, transparent 25.5%, transparent 75%, #c3cfe277 75%, #c3cfe277),
+        linear-gradient(60deg, #c3cfe277 25%, transparent 25.5%, transparent 75%, #c3cfe277 75%, #c3cfe277);
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+    z-index: -1;
+}

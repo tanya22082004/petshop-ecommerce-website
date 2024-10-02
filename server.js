@@ -38,10 +38,29 @@ app.post("/contact",(req,res)=>{
     res.redirect("/")
 })
 
+app.get("/collections",(req,res)=>{ // Added new route
+    res.sendFile(__dirname+"/collections.html");
+})
 
+app.get("/login", (req, res) => {
+    res.sendFile(__dirname + "/login.html");
+});
+
+app.post("/login", (req, res) => {
+
+    var username = req.body.username;
+    var password = req.body.password;
+    console.log(username,password);
+    // Here you would typically handle the login logic
+    // For now, we'll just redirect to the home page
+    res.redirect("/");
+});
 
 app.listen(3000,function(req,res){
     console.log ("started  server");
 })
 
-
+// Add this new route
+app.get("/wishlist", (req, res) => {
+    res.sendFile(__dirname + "/wishlist.html");
+});
