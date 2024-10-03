@@ -61,3 +61,35 @@ const activeElemOnScroll = function () {
 }
 
 addEventOnElem(window, "scroll", activeElemOnScroll);
+
+function addToWishlist(button) {
+    const productId = button.getAttribute('data-product-id');
+    const productName = button.getAttribute('data-product-name');
+    const productPrice = button.getAttribute('data-product-price');
+    const productImage = button.getAttribute('data-product-image');
+
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+    if (!wishlist.some(item => item.id === productId)) {
+        wishlist.push({ id: productId, name: productName, price: productPrice, image: productImage });
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        console.log('Item added to wishlist:', { id: productId, name: productName, image: productImage });
+        alert('Item added to wishlist!');
+    } else {
+        console.log('Item already in wishlist:', { id: productId, name: productName });
+        alert('Item is already in your wishlist!');
+    }
+
+    updateWishlistCount();
+}
+
+function updateWishlistCount() {
+    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    const wishlistCount = document.querySelector('.wishlist-count');
+    if (wishlistCount) {
+        wishlistCount.textContent = wishlist.length;
+    }
+}
+
+// Call this function when the page loads to update the initial count
+document.addEventListener('DOMContentLoaded', updateWishlistCount);
