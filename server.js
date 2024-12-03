@@ -7,7 +7,7 @@ const bcrypt = require('bcrypt');
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/kitterDB');
 
-// Define user schema directly in server.js
+//  user schema
 const userSchema = new mongoose.Schema({
     fullname: {
         type: String,
@@ -26,10 +26,10 @@ const userSchema = new mongoose.Schema({
     }
 });
 
-// Create User model
+//  User model
 const User = mongoose.models.User || mongoose.model('User', userSchema);
 
-// Define contact schema directly in server.js
+//  contact schema 
 const contactSchema = new mongoose.Schema({
     firstName: {
         type: String,
@@ -61,7 +61,7 @@ const contactSchema = new mongoose.Schema({
     }
 });
 
-// Create Contact model
+//  Contact model
 const Contact = mongoose.models.Contact || mongoose.model('Contact', contactSchema);
 
 const app=express();
@@ -174,4 +174,8 @@ app.post('/register', async (req, res) => {
         console.error('Registration error:', error);
         res.status(500).send('Error registering user');
     }
+});
+
+app.get("/cart", (req, res) => {
+    res.sendFile(__dirname + "/cart.html");
 });
