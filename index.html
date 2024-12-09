@@ -95,9 +95,8 @@
           <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
         </button>
 
-        <button class="action-btn" aria-label="cart">
+        <button class="action-btn" aria-label="cart" onclick="location.href='/cart'">
           <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-
           <span class="btn-badge">0</span>
         </button>
 
@@ -349,6 +348,15 @@
 
                   <data class="card-price" value="15">$15.00</data>
 
+                  <button class="add-to-cart-btn" 
+                          onclick="addToCart(this)" 
+                          data-product-id="1" 
+                          data-product-name="Commodo leo sed porta" 
+                          data-product-price="$15.00" 
+                          data-product-image="images/product-1.jpg">
+                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                    Add to Cart
+                  </button>
                 </div>
 
               </div>
@@ -388,6 +396,15 @@
 
                   <data class="card-price" value="45">$45.00</data>
 
+                  <button class="add-to-cart-btn" 
+                          onclick="addToCart(this)" 
+                          data-product-id="2" 
+                          data-product-name="Purus consequat congue sit" 
+                          data-product-price="$45.00" 
+                          data-product-image="images/product-2.jpg">
+                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                    Add to Cart
+                  </button>
                 </div>
 
               </div>
@@ -427,6 +444,15 @@
 
                   <data class="card-price" value="45">$45.00</data>
 
+                  <button class="add-to-cart-btn" 
+                          onclick="addToCart(this)" 
+                          data-product-id="3" 
+                          data-product-name="Morbi vel arcu scelerisque" 
+                          data-product-price="$45.00" 
+                          data-product-image="images/product-3.jpg">
+                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                    Add to Cart
+                  </button>
                 </div>
 
               </div>
@@ -466,6 +492,15 @@
 
                   <data class="card-price" value="49">$49.00</data>
 
+                  <button class="add-to-cart-btn" 
+                          onclick="addToCart(this)" 
+                          data-product-id="4" 
+                          data-product-name="Morbi vel arcu scelerisque" 
+                          data-product-price="$49.00" 
+                          data-product-image="images/product-4.jpg">
+                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                    Add to Cart
+                  </button>
                 </div>
 
               </div>
@@ -505,6 +540,15 @@
 
                   <data class="card-price" value="85">$85.00</data>
 
+                  <button class="add-to-cart-btn" 
+                          onclick="addToCart(this)" 
+                          data-product-id="5" 
+                          data-product-name="Morbi vel arcu scelerisque" 
+                          data-product-price="$85.00" 
+                          data-product-image="images/product-5.jpg">
+                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                    Add to Cart
+                  </button>
                 </div>
 
               </div>
@@ -544,6 +588,15 @@
 
                   <data class="card-price" value="85">$85.00</data>
 
+                  <button class="add-to-cart-btn" 
+                          onclick="addToCart(this)" 
+                          data-product-id="6" 
+                          data-product-name="Nam justo libero porta ege" 
+                          data-product-price="$85.00" 
+                          data-product-image="images/product-6.jpg">
+                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                    Add to Cart
+                  </button>
                 </div>
 
               </div>
@@ -583,6 +636,15 @@
 
                   <data class="card-price" value="85">$85.00</data>
 
+                  <button class="add-to-cart-btn" 
+                          onclick="addToCart(this)" 
+                          data-product-id="7" 
+                          data-product-name="Nam justo libero porta ege" 
+                          data-product-price="$85.00" 
+                          data-product-image="images/product-7.jpg">
+                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                    Add to Cart
+                  </button>
                 </div>
 
               </div>
@@ -622,6 +684,15 @@
 
                   <data class="card-price" value="55">$55.00</data>
 
+                  <button class="add-to-cart-btn" 
+                          onclick="addToCart(this)" 
+                          data-product-id="8" 
+                          data-product-name="Etiam commodo leo sed" 
+                          data-product-price="$55.00" 
+                          data-product-image="images/product-8.jpg">
+                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                    Add to Cart
+                  </button>
                 </div>
 
               </div>
@@ -1017,6 +1088,7 @@
 
   <!-- Add this before the closing </body> tag -->
   <script src="assets/js/script.js"></script>
+  <script src="js/cart.js"></script>
 
 </body>
 

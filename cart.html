@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Shopping Cart - Kitter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="container">
+            <a href="/" class="logo">Kitter</a>
+            <button class="action-btn" onclick="location.href='/'">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+                Continue Shopping
+            </button>
+        </div>
+    </header>
+
+    <main class="cart-main">
+        <div class="container">
+            <h1 class="cart-title">Shopping Cart</h1>
+            
+            <div class="cart-container">
+                <div class="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                
+                <div class="cart-summary">
+                    <h2>Order Summary</h2>
+                    <div class="summary-items">
+                        <div class="summary-item">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Tax (10%):</span>
+                            <span id="tax">$0.00</span>
+                        </div>
+                        <div class="summary-item total">
+                            <span>Total:</span>
+                            <span id="total">$0.00</span>
+                        </div>
+                    </div>
+                    <button class="checkout-btn">
+                        <ion-icon name="cart-outline"></ion-icon>
+                        Proceed to Checkout
+                    </button>
+                    <button class="clear-cart-btn" onclick="cart.clearCart()">
+                        <ion-icon name="trash-outline"></ion-icon>
+                        Clear Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
